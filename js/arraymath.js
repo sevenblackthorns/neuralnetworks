@@ -18,3 +18,13 @@ function ArrayShallowComparison(ArrayA, ArrayB) {
     }
     return true;
 }
+
+function ArrayShape(ArrayA) {
+    if (!Array.isArray(ArrayA) || ArrayA.length == 0) {
+        return [];
+    }
+    ComparisonShape = ArrayShape(ArrayA[0])
+    for (let i = 1; i < ArrayA.length; i++) {
+        
+    }
+}
