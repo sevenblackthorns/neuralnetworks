@@ -26,7 +26,8 @@ function ArrayShape(ArrayA) {
     let ComparisonShape = ArrayShape(ArrayA[0])
     for (let i = 1; i < ArrayA.length; i++) {
         if (!ArrayShallowComparison(ArrayShape(ArrayA[i]), ComparisonShape)) {
-            throw "arraymath.js ERROR 0, ArrayShape, INVALID ARRAY SHAPE.";
+            throw "arraymath.js, ERROR 0, ArrayShape, INVALID ARRAY SHAPE.";
         }
     }
+    return [ArrayA.length].concat(ComparisonShape);
 }
