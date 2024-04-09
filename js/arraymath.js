@@ -31,3 +31,14 @@ export function ArrayShape(ArrayA) {
     }
     return [ArrayA.length].concat(ComparisonShape);
 }
+
+export function ArrayElementWise(ArrayA, ArrayB) {
+    let RankA = ArrayRank(ArrayA);
+    let RankB = ArrayRank(ArrayB);
+    for (let i = 0; i < (RankB - RankA); i++) {
+        ArrayA = [ArrayA];
+    }
+    for (let i = 0; i < (RankA - RankB); i++) {
+        ArrayB = [ArrayB];
+    }
+}
