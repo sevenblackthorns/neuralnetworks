@@ -1,4 +1,4 @@
-function ArrayRank(ArrayA) {
+export function ArrayRank(ArrayA) {
     if (Array.isArray(ArrayA)) {
         return ArrayRank(ArrayA[0]) + 1;
     }
@@ -7,7 +7,7 @@ function ArrayRank(ArrayA) {
     }
 }
 
-function ArrayShallowComparison(ArrayA, ArrayB) {
+export function ArrayShallowComparison(ArrayA, ArrayB) {
     if (ArrayA.length != ArrayB.length) {
         return false;
     }
@@ -19,7 +19,7 @@ function ArrayShallowComparison(ArrayA, ArrayB) {
     return true;
 }
 
-function ArrayShape(ArrayA) {
+export function ArrayShape(ArrayA) {
     if (!Array.isArray(ArrayA) || ArrayA.length == 0) {
         return [];
     }
